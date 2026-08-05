@@ -13,7 +13,7 @@
 #### example:
 * Linux: The system is running the Linux kernel.
 * tryhackme: The hostname (the computer’s name).
-* <REDACTED>-aws: The kernel version installed on the machine.
+* < REDACTED >-aws: The kernel version installed on the machine.
 * x86_64: The hardware platform (also 64-bit).
 * GNU/Linux: The operating system type (Linux kernel + GNU tools).
 
