@@ -41,6 +41,10 @@
   * su user2 (new session drops us into previous user's home directory)
   * su -l user2 (new session has dropped us into the home directory of "user" automatically
 * su - root (change to root account)
+* /etc (commonplace location to store system files that are used by the OS)
+* /var (main root folders; stores data that is frequently accessed or written by services or apps running on the system)
+* /root (There isn't anything more to this folder other than just understanding that this is the home directory for the "root" user. But, it is worth a mention as the logical presumption is that this user would have their data in a directory such as "/home/root" by default)
+* /tmp (volatile and is used to store data that is only needed to be accessed once or twice. Once the computer is restarted, the contents of this folder are cleared out)
 
 
 #### Combine commands
