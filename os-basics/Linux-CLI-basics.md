@@ -71,3 +71,17 @@
     * rw-r--r-- -> 644 -> owner can read/write, other can only read
     * rwx------ -> 700 -> only the owner has access
 
+
+### Terminal text editors
+
+#### Nano commands
+* nano filename (create or edit file)
+* Ctrl = ^
+
+#### Vim commands
+* more advanced than nano
+* Advantages:
+ * Customisable - you can modify the keyboard shortcuts to be of your choosing
+ * Syntax Highlighting - this is useful if you are writing or maintaining code, making it a popular choice for software developers
+ * VIM works on all terminals where nano may not be installed
+ * There are a lot of resources such as cheatsheets(opens in new tab), tutorials, and the sorts available to you use.
