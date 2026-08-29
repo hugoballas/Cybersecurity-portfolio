@@ -26,7 +26,6 @@
 * uname (OS name)
 * df -h (check disk and storage)
 
-
 #### example:
 * Linux: The system is running the Linux kernel.
 * tryhackme: The hostname (the computer’s name).
@@ -49,6 +48,7 @@
 
 #### Combine commands
 * & (Runs the command, but does not wait for it to finish before you can do anything else. The command runs in the backgorund, and is helpful for commands that might take a while to complete, or ones that you want to keep running)
+  * echo "Hi THM" &
 * && (Runs both commands, but waits for the first command to finish first, before the next. Like a set of dominoes)
 * ">" (Used to redirect output. We can take the output of a command and send it to a file. This operator will overwrite anything that exists in the file)
 * ">>" (This redirector does the same thing, but instead of overwriting, it will just add the output to the bottom of the file)
@@ -81,7 +81,29 @@
 #### Vim commands
 * more advanced than nano
 * Advantages:
- * Customisable - you can modify the keyboard shortcuts to be of your choosing
- * Syntax Highlighting - this is useful if you are writing or maintaining code, making it a popular choice for software developers
- * VIM works on all terminals where nano may not be installed
- * There are a lot of resources such as cheatsheets(opens in new tab), tutorials, and the sorts available to you use.
+  * Customisable - you can modify the keyboard shortcuts to be of your choosing
+  * Syntax Highlighting - this is useful if you are writing or maintaining code, making it a popular choice for software developers
+  * VIM works on all terminals where nano may not be installed
+  * There are a lot of resources such as cheatsheets(opens in new tab), tutorials, and the sorts available to you use.
+
+### Processes
+#### commands
+* ps (list of running processes, status code, session that is running it, usage time of the CPU it is using, name/command of the program that is being executed)
+  * ps aux (processes run by other users and those that dont run from a session, i.e. system processes)
+* top (gives you real-time statistics about the processes running on your system instead of a one-time view. These statistics will refresh every 10 seconds)
+* kill "PID" (kill a command, kill a command and the associated PID)
+  * SIGTERM - Kill the process, but allow it to do some cleanup tasks beforehand
+  * SIGKILL - Kill the process - doesn't do any cleanup after the fact
+  * SIGSTOP - Stop/suspend a process
+* systemctl (this command allows us to interact with the systemd process/daemon)
+  * format: systemctl [option] [service]
+  * example: systemctl start apache2 / systemctl stop apache2
+  * 5 options for systemctl:
+    * start
+    * stop
+    * enable
+    * disable
+    * status
+* echo "Hi THM" & (running in the background)
+* fg (brings script/command back to focus/foreground)
+* 
