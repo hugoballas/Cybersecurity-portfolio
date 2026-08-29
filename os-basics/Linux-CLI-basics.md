@@ -106,4 +106,35 @@
     * status
 * echo "Hi THM" & (running in the background)
 * fg (brings script/command back to focus/foreground)
-* 
+
+
+### Automation
+#### commands
+* cron
+* crontabs (processes that is started during boot, which is responsible for facilitating and managing cron jobs. Is simply a special file with formatting that is recognised by the cron process to execute each line step-by-step -> require 6 specific values)
+  * MIN (minute to execute at)
+  * HOUR (hour to execute at)
+  * DOM (day of the month to execute at)
+  * MON (monthe of the year to execute at)
+  * DOW (day of the week to execute at)
+  * CMD (atual command that will be executed)
+ * i.e. backingup files such as "cmnatic"'s "Documents" every 12 hours -> 0 */12 * * * cp -R /home/cmnatic/Documents /var/backups/ (if we do not wish to provide a value for that specific field, i.e. we don't care what month, day, or year it is executed -- only that it is executed every 12 hours, we simply just place an asterisk)
+ * crontab -e (edit crontab where i can select and editor, i.e. nano.
+
+
+### Package Management
+#### commands
+* add-apt-repository (adding repositories)
+* apt (part of the package management software: benefits of apt means that whenever we update our system -- the repository that contains the pieces of software that we add also gets checked for updates)
+* dpkg (install software through the use of package installers)
+  * i.e. adding text editor Sublime Text to an Ubuntu machine as a repository. GPG (Gnu Privacy Guard) keys will guarantee the integrity of what we download. They keys are essencially a safety check from the developers. If the keys do no match up to what the system trusts and what the developers used, then the software will not be downloaded)
+     * wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - (download GPG key and use apt-key to trust it)
+     * A good practice is to have a separate file for every different community/3rd party repository that we add
+     * /etc/apt/sources.list.d# touch sublime-text.list (create a file name named sublime-text.list in /etc/apt/sources.list.d)
+     * use Nano to add & save the Sublime Text 3 repository into this newly created file
+     * apt update (updating apt to recognise this new entry)
+     * apt install sublime-text (after updating we can now install the software that we have trusted and added to apt)
+ * add-apt-repository --remove ppa:PPA_Name/ppa (removing packages)
+ * apt remove [software-name-here] (remove software)
+    * i.e. apt remove sublime-text
+ 
