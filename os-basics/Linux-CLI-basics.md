@@ -1,4 +1,4 @@
-### CLI: command-line interface
+## CLI: command-line interface
 
 #### commands:
 * pwd (print working directory) - show the folder im in
@@ -34,7 +34,7 @@
 * GNU/Linux: The operating system type (Linux kernel + GNU tools).
 
 
-#### AttackBox (Linux) Commands
+## AttackBox (Linux) Commands
 * ssh username@192.168.1.10 (connect/log in to an account, use commands while remote) - need password (invisible, doesnt show typing the password)
 * su - "user" (whenever i want to login from one user to another)
   * su user2 (new session drops us into previous user's home directory)
@@ -72,7 +72,7 @@
     * rwx------ -> 700 -> only the owner has access
 
 
-### Terminal text editors
+## Terminal text editors
 
 #### Nano commands
 * nano filename (create or edit file)
@@ -86,7 +86,7 @@
   * VIM works on all terminals where nano may not be installed
   * There are a lot of resources such as cheatsheets(opens in new tab), tutorials, and the sorts available to you use.
 
-### Processes
+## Processes
 #### commands
 * ps (list of running processes, status code, session that is running it, usage time of the CPU it is using, name/command of the program that is being executed)
   * ps aux (processes run by other users and those that dont run from a session, i.e. system processes)
@@ -108,7 +108,7 @@
 * fg (brings script/command back to focus/foreground)
 
 
-### Automation
+## Automation
 #### commands
 * cron
 * crontabs (processes that is started during boot, which is responsible for facilitating and managing cron jobs. Is simply a special file with formatting that is recognised by the cron process to execute each line step-by-step -> require 6 specific values)
@@ -122,7 +122,7 @@
  * crontab -e (edit crontab where i can select and editor, i.e. nano.
 
 
-### Package Management
+## Package Management
 #### commands
 * add-apt-repository (adding repositories)
 * apt (part of the package management software: benefits of apt means that whenever we update our system -- the repository that contains the pieces of software that we add also gets checked for updates)
