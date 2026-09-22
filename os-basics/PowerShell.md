@@ -59,12 +59,23 @@
 * get-localuser (lists all local user accounts on the system)
 * get-netipconfiguration (provvides detailed information about the network interfaces on the system)
 * get-netipaddress (show details for all IP addresses configured on the system even inactive ones)
-* 
+* get-process (detailed view of all currently running processes)
+* get-service (information about the status of services on the machine)
+* get-NetTCPConnection (displays current TCP connections, insights into both local and remote endpoints)
+* get-filehash (generating file hashes, which is particularly valuable in incident response, threat hunting, and malware analysis, as it helps verify file integrity and detect potential tampering)
+* get-item -path "C:\Users\captain\document\captain-cabin\ship-flag.txt" -stream * (view the Alternative Data Streams (ADS) attached to a file through Powershell) -> there can be streams attached to the file such us:
+      * :$DATA (default data stream of every NTFS file. It contains the normal file contents and is not an ADS)
+      * housinginfo (Alternate Data Stream (ADS) added to this file)
 
 
 
-
-
+## Scpriting
+#### commands
+* invoke-command (ssential for executing commands on remote systems, enables efficient remote management and—combining it with scripting—automation of tasks across multiple machines. It can also be used to execute payloads or commands on target systems during an engagement by penetration testers—or attackers alike)
+  * get-help invoke-command -examples
+   * i.e: Invoke-Command -FilePath c:\scripts\test.ps1 -ComputerName Server01
+   * Invoke-Command -ComputerName Server01 -Credential Domain01\User01 -ScriptBlock { Get-Culture }
+      * i.e: invoke-command -computername "royalfortune" -scriptblock {get-service}
 
 
 
