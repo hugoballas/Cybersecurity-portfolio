@@ -54,7 +54,12 @@
 
 ## System and Network Information
 #### commands
-*
+* get-computerinfo (retrieves comprehensive system information)
+* systeminfo (retrieves only a small set of system information)
+* get-localuser (lists all local user accounts on the system)
+* get-netipconfiguration (provvides detailed information about the network interfaces on the system)
+* get-netipaddress (show details for all IP addresses configured on the system even inactive ones)
+* 
 
 
 
