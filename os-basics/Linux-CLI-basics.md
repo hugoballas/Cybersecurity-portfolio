@@ -1,4 +1,4 @@
-## CLI: command-line interface
+# CLI: command-line interface
 
 #### commands:
 * pwd (print working directory) - show the folder im in
@@ -141,4 +141,18 @@
 
 ## Linux Shells
 #### commands
-*
+* grep
+  * grep THM disctionary.txt
+
+### Types of Linux Shells
+* Bash (Bourne Again Shell) - default shell
+* sh 
+* ksh 
+* csh 
+* Fish (Friendly Interactive Shell)
+* Zsh (Z Shell)
+#### commands
+* $SHELL (type of shell its being used)
+* cat /etc/shells (list of available/installed shells on a Linux OS)
+  * *type the name of the shell to switch*
+* chsh -s /usr/bin/zsh (permanently change the default shell to zsh)
