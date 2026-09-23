@@ -156,3 +156,80 @@
 * cat /etc/shells (list of available/installed shells on a Linux OS)
   * *type the name of the shell to switch*
 * chsh -s /usr/bin/zsh (permanently change the default shell to zsh)
+
+
+### Shell Scripting and Components
+* script name needs to have the extension .sh (default extension for bash scripts)
+* start the script from shebang (#!)
+
+#### Variables 
+- stores value inside, like URL, file path, etc. Can store value in a variable and use the variable name wherever u need it
+- examples:
+  * echo "Hey, what’s your name?" (echo command prints text or the value of something to the terminal)
+  * read name
+  * echo "Welcome, $name"
+
+- Result: it will ask for my name and after I answer it will say Welcome, name
+
+#### Loops 
+- something that is repeating
+- examples: 
+  * for i in {1..10};
+  * do
+  * echo $i
+  * done
+
+- Result: it will display all the numbers from 1 to 10
+
+#### Conditional Statements
+- help execute a specific code only when a condition is satisfied
+- example:
+  * echo "Please enter your name first:"
+  * read name
+  * if [ "$name" = "Stewart" ]; then
+    * echo "Welcome Stewart! Here is the secret: THM_Script"
+  * else
+    * echo "Sorry! You are not authorized to access the secret."
+  * fi
+
+#### Comments
+- sentence that we weite in our code just for the sake of our understanding. It is written with a # sign
+- example:
+  * *# Asking the user to enter a value.*
+  * echo "Please enter your name first:"
+
+#### exercise
+* *# Defining the Interpreter*
+* #!/bin/bash
+
+* *# Defining the variables*
+* username=""
+* companyname=""
+* pin=""
+
+* *# Defining the loop*
+* for i in {1..3}; do
+* *Defining the conditional statements*
+  * if [ "$i" -eq 1 ]; then
+    * echo "Enter your Username:"
+    * read username
+  * elif [ "$i" -eq 2 ]; then
+    * echo "Enter your Company name:"
+    * read companyname
+  * else
+    * echo "Enter your PIN:"
+    * read pin
+  * fi
+* done
+
+* *# Checking if the user entered the correct details*
+* if [ "$username" = "John" ] && [ "$companyname" = "Tryhackme" ] && [ "$pin" = "7385" ]; then
+  * echo "Authentication Successful. You can now access your locker, John."
+* else
+  * echo "Authentication Denied!!"
+* fi
+
+
+#### commands
+* chmod +x first_script.sh (gives permission to the script to be executed)
+* ./first_script.sh (executes the script)
