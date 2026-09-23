@@ -137,3 +137,8 @@
  * add-apt-repository --remove ppa:PPA_Name/ppa (removing packages)
  * apt remove [software-name-here] (remove software)
     * i.e. apt remove sublime-text
+
+
+## Linux Shells
+#### commands
+*
