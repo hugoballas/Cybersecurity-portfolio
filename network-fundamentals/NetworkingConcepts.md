@@ -49,4 +49,3 @@
 * provides network services directly to end-user applications
 * web browser would use the HTTP protocol to request a file, submit a form, or upload a file
 * i.e: HTTP, FTP, DNS, POP3, SMTP and IMAP
-
