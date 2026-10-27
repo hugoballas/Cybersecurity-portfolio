@@ -9,3 +9,8 @@
 
 ## Link Layer
 * Layer 2
+
+
+#### commands
+* telnet "IP" port (connecting using telnet)
+* ctrl + ] (closes connection)
