@@ -20,4 +20,57 @@
     * PUT - is used to create a new resource on the server and to update and overwrite existing information
     * DELETE - used to delete a specified file or resource on the server
 * HTTP and HTTPS commonly use TCP ports 80 and 443, respectively, and less commonly other ports such as 8080 and 8443
-* 
+#### commands
+* telnet 10.128.163.131
+* GET /flag.html HTTP/1.1
+* HOST: anything
+
+## FTP - Transfering Files
+* FTP server listens on TCP port 21 by default
+#### commands
+* USER - used to input the username
+* PASS - used to enter the password
+* RETR - (retrieve) used to download a file from the FTP server to the client
+* STOR - (store) used to upload a file from the client to the FTP server
+* ftp 10.128.163.131 - connect to the remote FTP server (need username and password to log in)
+* ls - returned a list of files available to download
+* type ascii - switch to ASCII mode as this is a text file
+* get text.txt - retrieve the file wanted
+
+## SMTP - Sending Email
+* SMTP (Simple Mail Transfer Protocol)
+* The SMTP server listens on TCP port 25 by default
+#### commands
+* HELO or EHLO - initiates an SMTP session
+* MAIL FROM - specifies the sender's email address
+* RCPT TO - specifies the recipients email address
+* DATA - indicates that the client will begin sending the content of the email message
+* . - is sent on a line by itself to indicate the end of the email message
+
+## POP3 - Receiving Email
+* POP3 - Post Office Protocol 3
+* POP3 server listens on TCP port 110 by default
+* email client sends its messages by relying on SMTP and retrieves them using POP3
+* SMTP is similar to handing your envelope or package to the post office, and POP3 is similar to checking your local mailbox for new letters or packages
+#### commands
+* USER <.username.> (without the .) - identifies user
+* PASS <.password.> (without the .) - provides the users password
+* STAT - request the number of messages and total size
+* LIST - lists all messages and their sizes
+* RETR <.message_number.> - retrieves the specifies message
+* DELE <.message_number.> - marks a message for deletion
+* QUIT - ends the POP3 session applying changes, such as deletions
+
+## IMAP - Synchronizing Email
+* IMAP (Internet Message Access Protocol)
+* IMAP server listens on TCP port 143 by default
+* protocol that allows synchronization of messages instead of deleting a message after retrieving it
+* used whenever you want to check email from multiple devices
+#### commands
+* LOGIN username password - authenticates the user
+* SELECT mailbox - selects the mailbox folder to work with
+* FETCH mail_number data_item_name - example fetch 3 body[] to fetch message number 3, header and body
+* MOVE sequence_set mailbox - moves the specified messages to another mailbox
+* COPY sequence_set data_item_name - copies the specified messages to another mailbox
+* LOGOUT - logs out
+
